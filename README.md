@@ -1,83 +1,87 @@
-# 🚀 Algorand Smart Bank — AI Credit Scoring Platform
+# Algorand Smart Bank – AI Credit Scoring on Blockchain
 
-## 🧠 Overview
+## Overview
 
-Algorand Smart Bank is an AI-powered fintech application that predicts a user’s **creditworthiness** using Machine Learning.
-The platform analyzes financial behavior — income, expenses, UPI activity, savings, and bill payments — to generate a real-time credit score and risk profile.
+Algorand Smart Bank is a decentralized fintech application built for the **Future of Finance** hackathon track.
+The project combines **Machine Learning credit scoring** with **Algorand blockchain** to create a secure and transparent student-focused financial platform.
 
-Built during a hackathon, this project combines **Web3 (Algorand blockchain)** with **ML-driven financial intelligence** to create a smarter, transparent credit system.
-
----
-
-## ✨ Key Features
-
-* 🤖 **AI Credit Score Prediction** using trained ML model
-* 📊 Financial health analytics & risk evaluation
-* 🔗 Blockchain-backed user data hashing (Algorand Testnet)
-* 💸 Send & Split payments
-* 🎯 Savings vault & event funding
-* 📜 Transaction history tracking
+It provides a UPI-style experience where users can send payments, split expenses, manage events, save funds, and generate an AI-powered credit score based on financial behavior.
 
 ---
 
-## ⚙️ Tech Stack
+## Features
 
-**Frontend**
-
-* React + Vite
-* Tailwind UI components
-* Pera Wallet Connect
-* Algorand JS SDK
-
-**Backend / ML**
-
-* Python
-* Flask API
-* Scikit-Learn model
-* CSV training dataset
-
-**Blockchain**
-
-* Algorand Testnet
-* On-chain hash storage for user financial profiles
+* AI Credit Score Prediction using Random Forest ML model
+* Risk Level and Loan Eligibility Analysis
+* Algorand Blockchain Data Hash Storage
+* Wallet Integration using Pera Wallet
+* Send Payments
+* Split Expenses
+* Event Fund Management
+* Savings Vault Tracking
+* AI Financial Health Dashboard
 
 ---
 
-## 🧩 How Credit Score Works
+## Credit Score Model
 
-The ML model evaluates:
+The Machine Learning model evaluates:
 
 * Monthly Income
 * Expenses
 * UPI Transaction Frequency
-* Savings Behavior
-* Water / Electricity / Rent Bill Payments
+* Savings Behaviour
+* Water Bill Payment
+* Electricity Bill Payment
+* Rent Payment
 * Emergency Fund Availability
 
-The output includes:
+Output:
 
-* Credit Score
+* Credit Score (300 – 900)
 * Risk Level
-* Loan Eligibility Insight
+* Loan Eligibility
+
+The ML model runs through a Flask backend API.
 
 ---
 
-## 🛠️ Local Setup
+## Blockchain Integration
 
-### 1️⃣ Clone Repo
+Sensitive user data is not stored directly on-chain.
+
+Process:
+
+1. Financial data is converted into a structured profile.
+2. Profile is hashed using SHA256.
+3. Only the hash is stored inside an Algorand transaction note.
+
+This ensures privacy, security, and tamper-proof verification.
+
+---
+
+## Project Structure
+
+frontend/
+src/
+App.jsx
+
+ml_server.py
+credit_model.py
+credit_dataset.csv
+
+---
+
+## Setup Instructions
+
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/kartiksingh2005/kartik.singh24.git
-cd kartik.singh24
+git clone <your-fork-link>
+cd Hackseries-2-QuickStart-template
 ```
 
-### 2️⃣ Start ML Server
-
-```bash
-python ml_server.py
-```
-
-### 3️⃣ Start Frontend
+### 2. Install Frontend
 
 ```bash
 cd frontend
@@ -85,21 +89,29 @@ npm install
 npm run dev
 ```
 
----
+App runs on: http://localhost:5173
 
-## 📈 Future Improvements
+### 3. Run ML Server
 
-* Smart contract–based lending logic
-* On-chain reputation scoring
-* Real-time credit recalculation
-* Mobile-first UI
+```bash
+pip install flask pandas scikit-learn
+python ml_server.py
+```
 
----
-
-## 👨‍💻 Author
-
-**Kartik Singh**
-Hackathon Project — AI + Blockchain Credit Scoring
+ML API runs on: http://localhost:5000
 
 ---
+
+## How It Works
+
+1. User connects Algorand wallet.
+2. Financial data is entered in Credit tab.
+3. Data is sent to ML backend.
+4. Credit score and risk level are predicted.
+5. User profile is hashed.
+6. Hash is stored on Algorand blockchain.
+7. Financial health dashboard updates in real time.
+
+---
+
 
