@@ -103,4 +103,3 @@ Hackathon Project — AI + Blockchain Credit Scoring
 
 ---
 
-⭐ If you like this project, give it a star!
